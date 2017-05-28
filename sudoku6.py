@@ -38,13 +38,13 @@ def inplace(puz, x):
 			sm.place(puz[x], missing_indices[x], row)
 			if(x==8):
 				print puz
+				for row in puz:
+					print(row)
 				return
 			inplace(puz,x+1)
-			print puz
-			print x
+		else:
 			for i in missing_indices[x]:
-				missing_values[i]=0
-			print puz
+				puz[x][i] = 0
 """
 	inplace(puz,x)
 	
